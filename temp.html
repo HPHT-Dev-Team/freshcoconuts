@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Example</title>
+    <style>
+        .content {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .hidden-text {
+            display: none; /* Initially hidden */
+        }
+
+        .read-more-btn {
+            margin-top: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .read-more-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="text">
+            This is the visible part of the text. 
+            <span class="hidden-text">Here is the hidden content that will be displayed when you click "Read More".</span>
+        </p>
+        <button class="read-more-btn">Read More</button>
+    </div>
+
+    <script>
+        // Add event listener to the button
+        document.querySelector(".read-more-btn").addEventListener("click", function () {
+            const hiddenText = document.querySelector(".hidden-text");
+
+            if (hiddenText.style.display === "none" || hiddenText.style.display === "") {
+                // Show the hidden text
+                hiddenText.style.display = "inline"; 
+                // Update the button text
+                this.textContent = "Read Less"; 
+            } else {
+                // Hide the text again
+                hiddenText.style.display = "none"; 
+                // Reset the button text
+                this.textContent = "Read More"; 
+            }
+        });
+    </script>
+</body>
+</html>

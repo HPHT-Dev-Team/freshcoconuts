@@ -349,7 +349,7 @@ Banner Area
 
 
 .navbar-nav .nav-link {
-  padding-right: 55px !important;
+  padding-right: 60px !important;
   padding-top: 25px;
   padding-bottom: 25px;
   font-weight: 600;
@@ -1178,7 +1178,7 @@ Contact Form Page
 }
 
 .contact-item {
-  border: 2px solid #eef2fb;
+  border: 2px solid #000000;
   padding: 35px 20px;
   text-align: center;
   flex-basis: 33.33%;
@@ -1199,7 +1199,7 @@ Contact Form Page
   height: 55px;
   border-radius: 35px;
   padding-left: 20px;
-  border-color: transparent;
+border :1px solid #225812
 }
 
 #contactForm .form-control:focus {
@@ -1442,10 +1442,10 @@ Fixed btm top
   opacity: 0;
 }
 
-.fixed-btm-top .scroll-to-top:hover {
+/* .fixed-btm-top .scroll-to-top:hover {
   background: #F08100;
   color: #fff;
-}
+} */
 
 .scroll-to-top.reveal {
   opacity: 1;
@@ -2112,7 +2112,7 @@ Single Blog Page
     padding-left: 10px !important;
   }
   .padding_left_for_desk{
-    padding-left: 325px !important;
+    padding-left: 150px !important;
   }
 }
 
@@ -2171,7 +2171,7 @@ Single Blog Page
 }
 
 .nutrition-table th, .nutrition-table td {
-  padding: 10px;
+  padding: 4px;
   border: 1px solid #ddd;
   text-align: left;
 }
@@ -2217,8 +2217,46 @@ Single Blog Page
   .modal-info {
       width: 100%;
   }
+  .dropdown_nav_mob{
+    background: #ffffff !important;
+  }
+}
+.dropdown_nav_mob{
+  background: linear-gradient(to bottom, #A8D5BA, #F1F8E9, #E7DFC6);
+}
+.contact_form_style{
+  transition: all 0.3s ease-in-out;
+  background: #eef2fb;
+  height: 55px;
+  border-radius: 35px;
+  padding-left: 20px;
+  border-color: transparent;
+}
+.fm{
+  background-color: transparent !important;
+  border: none !important;
+  padding: 10px !important;
 }
 
+@media (min-width: 993px) and (max-width: 1100px) {
+.banner-img{
+  margin-left: -180px !important;
 
+}
+.padding_left_for_desk {
+  padding-left: 80px !important;
+  
+}
+.navbar-nav .nav-link {
+  padding-right: 10px !important;
+  font-size: 17px !important;
+}
+.h4_m{
+  font-size: 17px !important;
 
+}
+}
+.secondary-bg1{
+  background-color: transparent;
+}
 
