@@ -79,7 +79,7 @@
 /* .read-more-btn:hover {
     background-color: #0056b3;
 } */
-#more, #more2, #more3 {display: none;}
+#more, #more2, #more3,#more4,#more6,#more5 {display: none;}
 </style>
 
 <script>
@@ -131,6 +131,55 @@ function myFunction3() {
     moreText.style.display = "inline";
   }
 }
+// 4
+function myFunction4() {
+  var dots = document.getElementById("dots4");
+  var moreText = document.getElementById("more4");
+  var btnText = document.getElementById("myBtn4");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+// 5
+function myFunction5() {
+  var dots = document.getElementById("dots5");
+  var moreText = document.getElementById("more5");
+  var btnText = document.getElementById("myBtn5");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+// 6
+function myFunction6() {
+  var dots = document.getElementById("dots6");
+  var moreText = document.getElementById("more6");
+  var btnText = document.getElementById("myBtn6");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
 </script>
 
 
@@ -380,7 +429,7 @@ function myFunction3() {
                     <h4>Diamond Cut</h4>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
                     
-                    <a  class="btn btn-main2 read-more-btn" onclick="myFunction()" id="myBtn">Learn More<i class="ti-angle-right"></i></a>
+                    <a  class="btn btn-main2 read-more-btn" onclick="myFunction()" id="myBtn">Read More<i class="ti-angle-right"></i></a>
                 </div>
             </div>
 
@@ -392,7 +441,7 @@ function myFunction3() {
                     </div>
                     <h4>Easy Open</h4>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots2">...</span><span id="more2">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-                    <a  class="btn btn-main2" onclick="myFunction2()" id="myBtn2">Learn More<i class="ti-angle-right"></i></a>
+                    <a  class="btn btn-main2" onclick="myFunction2()" id="myBtn2">Read More<i class="ti-angle-right"></i></a>
                 </div>
             </div>
 
@@ -404,10 +453,53 @@ function myFunction3() {
                     </div>
                     <h4>Coconut with straw</h4>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots3">...</span><span id="more3">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>                    
-                    <a class="btn btn-main2" onclick="myFunction3()" id="myBtn3"> Learn More<i class="ti-angle-right"></i></a>
+                    <a class="btn btn-main2" onclick="myFunction3()" id="myBtn3"> Read More<i class="ti-angle-right"></i></a>
                 </div>
             </div>
+
+            <div class="col-lg-4 col-md-6 mt-resp">
+              <div class="service-item">
+                  <div class="service-img">
+                      <span>04</span>
+                      <img src="assets/images/banner/1653378771__kelapa_Ber_1-removebg-preview (1).png" style="border-radius: 50% !important; position: relative; top: -22px !important; left: -5px !important;"  alt="" class="img-fluid">
+                  </div>
+                  <h4>Diamond Cut</h4>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots4">...</span><span id="more4">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  
+                  <a  class="btn btn-main2 read-more-btn" onclick="myFunction4()" id="myBtn4">Read More<i class="ti-angle-right"></i></a>
+              </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 mt-resp">
+              <div class="service-item">
+                  <div class="service-img">
+                      <span>05</span>
+                      <img src="assets/images/services/easy_to_open-removebg-preview.png" style="border-radius: 50% !important;" alt="" class="img-fluid">
+                  </div>
+                  <h4>Easy Open</h4>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots5">...</span><span id="more5">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                  <a  class="btn btn-main2" onclick="myFunction5()" id="myBtn5">Read More<i class="ti-angle-right"></i></a>
+              </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 mt-resp">
+              <div class="service-item">
+                  <div class="service-img">
+                      <span>06</span>
+                      <img src="assets/images/polish-2-removebg-preview.png" style="border-radius: 50% !important;" alt="" class="img-fluid">
+                  </div>
+                  <h4>Coconut with straw</h4>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem <span id="dots6">...</span><span id="more6">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>                    
+                  <a class="btn btn-main2" onclick="myFunction6()" id="myBtn6"> Read More<i class="ti-angle-right"></i></a>
+              </div>
+          </div>
+          
         </div>
+  
+          
+        
+          
+      
     </div>
 </section>
 
