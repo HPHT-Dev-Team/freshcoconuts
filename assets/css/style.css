@@ -349,7 +349,11 @@ Banner Area
 
 
 .navbar-nav .nav-link {
+<<<<<<< HEAD
   padding-right: 60px !important;
+=======
+  padding-right: 55px !important;
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
   padding-top: 25px;
   padding-bottom: 25px;
   font-weight: 600;
@@ -1178,7 +1182,11 @@ Contact Form Page
 }
 
 .contact-item {
+<<<<<<< HEAD
   border: 2px solid #000000;
+=======
+  border: 2px solid #eef2fb;
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
   padding: 35px 20px;
   text-align: center;
   flex-basis: 33.33%;
@@ -1199,7 +1207,11 @@ Contact Form Page
   height: 55px;
   border-radius: 35px;
   padding-left: 20px;
+<<<<<<< HEAD
 border :1px solid #225812
+=======
+  border-color: transparent;
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
 }
 
 #contactForm .form-control:focus {
@@ -1442,10 +1454,17 @@ Fixed btm top
   opacity: 0;
 }
 
+<<<<<<< HEAD
 /* .fixed-btm-top .scroll-to-top:hover {
   background: #F08100;
   color: #fff;
 } */
+=======
+.fixed-btm-top .scroll-to-top:hover {
+  background: #F08100;
+  color: #fff;
+}
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
 
 .scroll-to-top.reveal {
   opacity: 1;
@@ -2112,7 +2131,11 @@ Single Blog Page
     padding-left: 10px !important;
   }
   .padding_left_for_desk{
+<<<<<<< HEAD
     padding-left: 150px !important;
+=======
+    padding-left: 325px !important;
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
   }
 }
 
@@ -2217,6 +2240,7 @@ Single Blog Page
   .modal-info {
       width: 100%;
   }
+<<<<<<< HEAD
   .dropdown_nav_mob{
     background: #ffffff !important;
   }
@@ -2259,4 +2283,10 @@ Single Blog Page
 .secondary-bg1{
   background-color: transparent;
 }
+=======
+}
+
+
+
+>>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
 
