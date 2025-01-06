@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Prevents image from affecting line height */
+            margin: 10px 0; /* Adds some spacing around the image */
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Basic HTML Page</h1>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <h2>This is a Heading</h2>
+            <p>This is a paragraph of text. It's used to provide information or tell a story. You can add more paragraphs as needed.</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="JavaScript Logo">
+            <p>This image is the logo of JavaScript. Images can enhance your content visually.</p>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+
+            <ol>
+                <li>First step</li>
+                <li>Second step</li>
+                <li>Third step</li>
+            </ol>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This is a section about our company or website. You can include information about your mission, team, or services.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>You can contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
