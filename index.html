@@ -177,10 +177,8 @@
             <a class="navbar-brand" href="index.html">
               <img src="assets/images/logo-dark.png" alt="Orgenik" class="img-fluid padding_right_for_desk">
             </a>
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button> -->
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" dz
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="fa fa-bars"></span>
                 </button> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -1496,7 +1494,7 @@
   <!-- <script src="assets/js/contact.js"></script> -->
   <script src="assets/js/script.js"></script>
   <script>
-  document.getElementById("contactForm").addEventListener("submit", function (e) {
+ document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent form submission
 
     // Get form values
@@ -1540,13 +1538,13 @@
         document.getElementById("messageError").style.display = "none";
     }
 
-    // If valid, submit the form
+    // If valid, reset the form
     if (isValid) {
-        this.submit(); // Submit the form programmatically
+      this.submit();
+        this.reset(); // Reset the form
+       
     }
 });
-
-
   </script>
  
 </body>

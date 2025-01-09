@@ -349,11 +349,7 @@ Banner Area
 
 
 .navbar-nav .nav-link {
-<<<<<<< HEAD
-  padding-right: 60px !important;
-=======
-  padding-right: 55px !important;
->>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
+  padding-right: 16px !important;
   padding-top: 25px;
   padding-bottom: 25px;
   font-weight: 600;
@@ -1443,13 +1439,13 @@ Fixed btm top
 }
 
 .fixed-btm-top .scroll-to-top {
-  /* display: inline-block; */
-  /* text-align: center; */
-  /* height: 50px; */
-  /* background: #408858; */
-  /* color: #fff;
+  display: contents; 
+  text-align: center;
+  height: 50px;
+  background: #408858;
+  color: #fff;
   width: 50px;
-  border-radius: 100%; */
+  border-radius: 100%;
   padding-top: 10px;
   opacity: 0;
 }
@@ -1790,7 +1786,7 @@ Blog pagination
   border-radius: 25px;
   color: #fff;
   font-size: 16px;
-  display: flex;
+  display: block;
   align-items: center;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -2278,7 +2274,29 @@ Single Blog Page
       margin-top:5% ;
   }
 }
-
+@media (min-width: 1118px) {
+  .banner-img{
+    margin-left: -60px;
+  }
+  .padding_left_for_desk {
+    padding-left: 10px !important;
+}
+.navbar-nav .nav-link {
+ 
+  font-size: 19px !important;
+ 
+}
+}
+@media (min-width: 1230px) {
+  .padding_left_for_desk {
+    padding-left: 180px !important;
+}
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
 
 
 
