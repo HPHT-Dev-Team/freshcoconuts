@@ -339,7 +339,12 @@ Banner Area
 .navbar {
   background: transparent !important;
   padding: 10px 20px;
+  backdrop-filter: blur(10px); /* Standard property */
+  -webkit-backdrop-filter: blur(25px); /* Safari/WebKit browsers */
+  position: fixed !important;
+  top: 2% !important;
 }
+
 @media (max-width: 767px) {
   .navbar-mob {
     background: #fff !important;
@@ -1178,11 +1183,7 @@ Contact Form Page
 }
 
 .contact-item {
-<<<<<<< HEAD
   border: 2px solid #000000;
-=======
-  border: 2px solid #eef2fb;
->>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
   padding: 35px 20px;
   text-align: center;
   flex-basis: 33.33%;
@@ -1197,25 +1198,20 @@ Contact Form Page
   color: #408858;
 }
 
-#contactForm .form-control {
+#contatct_section .form-control {
   transition: all 0.3s ease-in-out;
   background: #eef2fb;
   height: 55px;
   border-radius: 35px;
   padding-left: 20px;
-<<<<<<< HEAD
-border :1px solid #225812
-=======
-  border-color: transparent;
->>>>>>> e76acf2ae5a0eeff064a6565f2086ff2074b082e
-}
+  border :1px solid #225812}
 
-#contactForm .form-control:focus {
+#contatct_section .form-control:focus {
   background: transparent;
   border-color: #F08100;
 }
 
-#contactForm textarea.form-control {
+#contatct_section textarea.form-control {
   height: auto;
   border-radius: 15px;
 }
@@ -2292,10 +2288,85 @@ Single Blog Page
     padding-left: 180px !important;
 }
 }
-.navbar {
-  position: sticky;
+.style_text{
+  line-height: 30px;
+  letter-spacing: 0.02px;
+}
+
+/* btn */
+button{
+  width: 270px;
+  height: 80px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.check-box{
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+  position: absolute;
   top: 0;
-  z-index: 1000; /* Ensure it stays above other content */
+  right: -40px;
+  opacity: 0;
+}
+
+.check-box svg{
+  width: 40px;
+  margin: 20px;
+}
+
+svg path{
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+
+.active1{
+  background: #408858;
+  transition: 1s;
+  color: #fff;
+}
+
+.active .check-box{
+  right: 0;
+  opacity: 1;
+  transition: 1s;
+}
+
+.active p{
+  margin-right: 125px;
+  transition: 1s;
+  margin-top: 15px;
+}
+
+.active svg path{
+  stroke-dashoffset: 0;
+  transition: 1s;
+  transition-delay: 1s;
+}
+/* btn  end */
+.carousel-control-prev {
+  left: 0;
+  display: block;
+  top: 50% !important;
+}
+.carousel-control-next {
+  left: 90%;
+  display: block;
+  top: 50% !important;
 }
 
 

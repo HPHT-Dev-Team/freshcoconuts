@@ -34,6 +34,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -205,12 +206,12 @@
                             </div> -->
                 </li>
                 <li class="nav-item ">
-                  <a href="products.html" class="nav-link js-scroll-trigger">
+                  <a href="about.html" class="nav-link js-scroll-trigger">
                     About
                   </a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbar3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="products.html" id="navbar3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Products
                   </a>
                   <ul class="dropdown-menu dropdown_nav_mob" >
@@ -269,7 +270,7 @@
                             </div>
                         </li> -->
                 <li class="nav-item ">
-                  <a href="#contatct_section" class="nav-link">
+                  <a href="https://forms.office.com/r/iPMCdkqgMs?origin=lprLink" class="nav-link">
                     Contact Us
                   </a>
                 </li>
@@ -1054,7 +1055,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
            
-              <form class="contact__form form-row" method="POST" action="https://formspree.io/f/mannbpyl" id="contactForm">
+              <form  id="submit-to-google-sheet">
                 <div class="row">
                     <div class="col-12">
                         <div class="alert alert-success contact__msg" style="display: none;" role="alert">
@@ -1066,35 +1067,44 @@
                 <div class="row form-row">
                     <div class="col-lg-6 mt-3">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
                             <small class="text-danger error" id="nameError" style="display: none;">Please enter your name.</small>
                         </div>
                     </div>
             
                     <div class="col-lg-6 mt-3">
                         <div class="form-group">
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Email Address">
+                            <input type="text" name="email" id="email" class="form-control" placeholder="Email Address" required>
                             <small class="text-danger error" id="emailError" style="display: none;">Please enter a valid email address.</small>
                         </div>
                     </div>
             
                     <div class="col-lg-12 mt-3">
                         <div class="form-group">
-                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
+                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
                             <small class="text-danger error" id="subjectError" style="display: none;">Please enter a subject.</small>
                         </div>
                     </div>
             
                     <div class="col-lg-12 mt-3">
                         <div class="form-group">
-                            <textarea id="message" name="message" cols="30" rows="8" class="form-control" placeholder="Your Message"></textarea>
+                            <textarea id="message" name="message" cols="30" rows="8" class="form-control" placeholder="Your Message" required></textarea>
                             <small class="text-danger error" id="messageError" style="display: none;">Please enter your message.</small>
                         </div>
                     </div>
             
                     <div class="col-lg-12">
                         <div class="mt-4 text-center">
-                            <button class="btn btn-main2" type="submit">Send Message <i class="ti-angle-right ml-2"></i></button>
+                            <!-- <button class="btn btn-main2" type="submit">Send Message <i class="ti-angle-right ml-2"></i></button> -->
+
+                            <button id="btn" type="submit">
+                              <p id="btnText" style="color: #fff;margin-top: 15px;">Submit</p>
+                              <div class="check-box">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                      <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                  </svg>
+                              </div>
+                          </button>
                         </div>
                     </div>
                 </div>
@@ -1478,6 +1488,110 @@
   <!-- 
     Essential Scripts
     =====================================-->
+    <script type="text/javascript">
+      const btn = document.querySelector("#btn");
+      const btnText = document.querySelector("#btnText");
+    
+      // Add click animation logic only when validation passes
+      function triggerButtonAnimation() {
+        btnText.innerHTML = "Thanks"; // Change button text to "Thanks"
+        btn.classList.add("active1"); // Add animation class
+        setTimeout(() => {
+          btnText.innerHTML = "Submit"; // Reset button text after animation
+          btn.classList.remove("active1"); // Remove animation class
+        }, 2000); // Animation duration
+      }
+    </script>
+    
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxYduGK7cxqPdViGuP4ItnuLi7V-P3JSPkKLx8Nmfp2BsMLpvFS92-MHS7TF3Wp3NA3tw/exec";
+      const form = document.forms["submit-to-google-sheet"];
+    
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // Prevent default form behavior
+    
+        // Collect input values
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+    
+        // Validation flags
+        let isValid = true;
+    
+        // Validate Name
+        if (!name) {
+          document.getElementById("nameError").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("nameError").style.display = "none";
+        }
+    
+        // Validate Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          document.getElementById("emailError").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("emailError").style.display = "none";
+        }
+    
+        // Validate Subject
+        if (!subject) {
+          document.getElementById("subjectError").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("subjectError").style.display = "none";
+        }
+    
+        // Validate Message
+        if (!message) {
+          document.getElementById("messageError").style.display = "block";
+          isValid = false;
+        } else {
+          document.getElementById("messageError").style.display = "none";
+        }
+    
+        // If validation fails, stop and show errors
+        if (!isValid) {
+          return;
+        }
+    
+        // Trigger button animation after successful validation
+        triggerButtonAnimation();
+    
+        // Form is valid; proceed with submission
+        const formData = new FormData(form);
+
+            // Get the current date and time
+    const now = new Date();
+    const date = now.toLocaleDateString(); // e.g., "1/20/2025"
+    const time = now.toLocaleTimeString(); // e.g., "5:30:45 PM"
+
+    // Append the date and time separately to FormData
+    formData.append("date", date);
+    formData.append("time", time);
+
+    
+        fetch(scriptURL, { method: "POST", body: formData })
+          .then((response) => {
+            if (response.ok) {
+              swal("Done", "Submitted Successfully.", "success");
+               // Reset form on success
+            } else {
+              throw new Error("Submission failed");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            swal("Error", "Something went wrong. Please try again!", "error");
+          });
+          form.reset();
+      });
+    </script>
+    
+    
+    
 
   <!-- Main jQuery -->
   <script src="assets/vendors/jquery/jquery.js"></script>
@@ -1493,7 +1607,7 @@
   <script src="assets/vendors/owl/owl.carousel.min.js"></script>
   <!-- <script src="assets/js/contact.js"></script> -->
   <script src="assets/js/script.js"></script>
-  <script>
+  <!-- <script>
  document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent form submission
 
@@ -1545,7 +1659,7 @@
        
     }
 });
-  </script>
+  </script> -->
  
 </body>
 
